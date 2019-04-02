@@ -8,6 +8,16 @@ namespace ItemsService.Adapters
 
         public ItemDto(ItemEntity entity)
         {
+            this.Text = entity.Text;
+        }
+        
+        // Use AutoMapper for this in big project.
+        public ItemEntity ToEntity()
+        {
+            return new ItemEntity
+            {
+                Text = this.Text
+            };
         }
     }
 }
