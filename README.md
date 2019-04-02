@@ -1,0 +1,2 @@
+# HexagonalDddSingneProgectExample
+MongoDB, Hexagonal DDD 
