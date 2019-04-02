@@ -7,8 +7,8 @@ namespace ItemsService.Domain
         List<ItemEntity> GetAll();
         void Add(ItemEntity entity);
     }
-    
-    public class ItemsService:IItemsService
+
+    public class ItemsService : IItemsService
     {
         private readonly IItemRepository _repository;
 
@@ -16,10 +16,10 @@ namespace ItemsService.Domain
         {
             _repository = repository;
         }
-        
+
         public List<ItemEntity> GetAll()
         {
-          return  _repository.GetAll();
+            return _repository.GetAll();
         }
 
         public void Add(ItemEntity entity)

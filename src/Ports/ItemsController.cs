@@ -1,20 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Collections.Generic;
+using System.Linq;
+using ItemsService.Domain;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ItemsService.Controllers
 {
-    
     public class ItemsController : Controller
     {
-        [HttpGet]
-        public IActionResult Get()
+        private readonly IItemsService _service;
+
+        public ItemsController(IItemsService service)
         {
-            return Content("Hello world");
+            _service = service;
+        }
+        
+        [HttpPost]
+        public List<ItemModel> GetAll()
+        {
+            return _service.GetAll().Select(item => new ItemModel(item)).ToList();
         }
 
         [HttpPost]
-        public IActionResult Post()
+        public void Post(ItemModel model)
         {
-            return Content("Posted!");
+            _service.Add(model.ToEntity());
         }
     }
 }

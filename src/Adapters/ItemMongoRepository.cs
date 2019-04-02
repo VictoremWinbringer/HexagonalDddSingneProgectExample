@@ -2,9 +2,10 @@ using System.Collections.Generic;
 using ItemsService.Domain;
 using MongoDB.Driver;
 using System.Linq;
+
 namespace ItemsService.Adapters
 {
-    public class ItemMongoRepository:IItemRepository
+    public class ItemMongoRepository : IItemRepository
     {
         private readonly IMongoCollection<ItemDto> _items;
 
@@ -12,7 +13,7 @@ namespace ItemsService.Adapters
         {
             _items = database.GetCollection<ItemDto>("Items");
         }
-        
+
         public List<ItemEntity> GetAll()
         {
             return _items

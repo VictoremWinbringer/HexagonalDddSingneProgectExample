@@ -10,7 +10,7 @@ namespace ItemsService.Adapters
         {
             this.Text = entity.Text;
         }
-        
+
         // Use AutoMapper for this in big project.
         public ItemEntity ToEntity()
         {
