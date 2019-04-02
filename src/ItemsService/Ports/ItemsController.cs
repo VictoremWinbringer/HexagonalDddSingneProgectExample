@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ItemsLib.Domain;
+using ItemsService.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ItemsService.Controllers

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using ItemsLib.Domain;
+using ItemsService.Domain;
 using MongoDB.Driver;
 
-namespace ItemsLib.Adapters
+namespace ItemsService.Adapters
 {
     public class ItemMongoRepository : IItemRepository
     {
