@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ItemsService.Domain
+namespace ItemsLib.Domain
 {
     public interface IItemsService
     {

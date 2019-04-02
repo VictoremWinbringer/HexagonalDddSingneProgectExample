@@ -50,4 +50,9 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\LICENSE.txt" />
     </ItemGroup>
 
+
+    <ItemGroup>
+      <ProjectReference Include="..\ItemsLib\ItemsLib.csproj" />
+    </ItemGroup>
+
 </Project>

@@ -1,9 +1,16 @@
-using ItemsService.Domain;
+using ItemsLib.Domain;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
-namespace ItemsService.Adapters
+namespace ItemsLib.Adapters
 {
     public class ItemDto
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+        
+        
         public string Text { get; set; }
 
         public ItemDto(ItemEntity entity)

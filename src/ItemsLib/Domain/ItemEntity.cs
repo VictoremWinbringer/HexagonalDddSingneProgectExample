@@ -1,4 +1,4 @@
-namespace ItemsService.Domain
+namespace ItemsLib.Domain
 {
     public class ItemEntity
     {

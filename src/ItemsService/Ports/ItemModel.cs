@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-using ItemsService.Domain;
+using ItemsLib.Domain;
 
 namespace ItemsService.Controllers
 {
@@ -10,6 +10,11 @@ namespace ItemsService.Controllers
         public ItemModel(ItemEntity entity)
         {
             this.Text = entity.Text;
+        }
+
+        public ItemModel()
+        {
+            
         }
 
         public ItemEntity ToEntity()

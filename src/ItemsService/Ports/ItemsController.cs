@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ItemsService.Domain;
+using ItemsLib.Domain;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ItemsService.Controllers
@@ -21,7 +21,7 @@ namespace ItemsService.Controllers
         }
 
         [HttpPost]
-        public void Post(ItemModel model)
+        public void Add([FromBody] ItemModel model)
         {
             _service.Add(model.ToEntity());
         }
