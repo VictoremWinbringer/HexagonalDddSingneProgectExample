@@ -5,7 +5,8 @@ namespace ItemsService.Controllers
 {
     public class ItemModel
     {
-        [MaxLength(255)] public string Text { get; set; }
+        [StringLength(255, MinimumLength = 4)]
+        public string Text { get; set; }
 
         public ItemModel(ItemEntity entity)
         {

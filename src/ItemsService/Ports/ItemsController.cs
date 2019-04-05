@@ -14,7 +14,7 @@ namespace ItemsService.Controllers
             _service = service;
         }
         
-        [HttpPost]
+        
         public List<ItemModel> GetAll()
         {
             return _service.GetAll().Select(item => new ItemModel(item)).ToList();
