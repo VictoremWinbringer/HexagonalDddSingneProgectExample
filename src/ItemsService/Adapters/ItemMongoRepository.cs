@@ -7,11 +7,11 @@ namespace ItemsService.Adapters
 {
     public class ItemMongoRepository : IItemRepository
     {
-        private readonly IMongoCollection<ItemDto> _items;
+        private readonly IMongoCollection<Item> _items;
 
         public ItemMongoRepository(IMongoDatabase database)
         {
-            _items = database.GetCollection<ItemDto>("Items");
+            _items = database.GetCollection<Item>("Items");
         }
 
         public List<ItemEntity> GetAll()
@@ -25,7 +25,7 @@ namespace ItemsService.Adapters
 
         public void Save(ItemEntity entity)
         {
-            var item = new ItemDto(entity);
+            var item = new Item(entity);
             _items.InsertOne(item);
         }
     }
