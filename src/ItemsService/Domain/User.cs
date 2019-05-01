@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Rewrite;
 
 namespace ItemsService.Domain
 {
@@ -25,12 +26,6 @@ namespace ItemsService.Domain
             _items.Add(item);
         }
 
-        public void Sell(Item item)
-        {
-            if (!_items.Any(i => i.Id.Value == item.Id.Value))
-                throw new UserDontHaveThisItemException(item);
-            Money = new Money(this.Money.Value + item.Price.Value);
-            _items.RemoveAll(i => i.Id.Value == item.Id.Value);
-        }
+      
     }
 }

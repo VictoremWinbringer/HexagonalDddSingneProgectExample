@@ -4,7 +4,7 @@ using ItemsService.Domain;
 
 namespace ItemsService.Controllers
 {
-    public class ItemModel
+    public class ItemReadModel
     {
         public string Id { get; set; }
         
@@ -14,20 +14,9 @@ namespace ItemsService.Controllers
         [Display(Name = "Цена")]
         public decimal Price { get; set; }
 
-        public ItemModel(Item entity)
+        public ItemReadModel(Item entity)
         {
             this.Name = entity.Name.Value;
-        }
-
-        [Obsolete("For json serialization only")]
-        public ItemModel()
-        {
-            
-        }
-
-        public Item ToEntity()
-        {
-            return new Item(new Id(this.Id),  new Name(this.Name), new Money(0));
         }
     }
 }

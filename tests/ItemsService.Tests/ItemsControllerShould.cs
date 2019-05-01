@@ -39,7 +39,11 @@ namespace ItemsService.Tests
         [Fact]
         public async Task AdOneToAll()
         {
-            var item = new ItemModel(new Item( new Name("Test"), new Money(0)));
+            var item = new ItemCreateModel
+            {
+                Name = "Test",
+                Price = 0
+            };
 
             var oldItems = await GetAll();
             await Add(item);
@@ -48,16 +52,16 @@ namespace ItemsService.Tests
             Assert.Contains(newItems, model => model.Name == item.Name);
         }
 
-        private async Task<List<ItemModel>> GetAll()
+        private async Task<List<ItemReadModel>> GetAll()
         {
             var content = new StringContent("");
             var response = await _client.PostAsync("/items/getall", content);
             response.EnsureSuccessStatusCode();
             var json = await response.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<List<ItemModel>>(json);
+            return JsonConvert.DeserializeObject<List<ItemReadModel>>(json);
         }
 
-        private async Task Add(ItemModel model)
+        private async Task Add(ItemCreateModel model)
         {
             var json = JsonConvert.SerializeObject(model);
             var content = new StringContent(json);

@@ -8,6 +8,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E9D23080-09C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E67F2C5A-0CEF-47F5-BE39-66561E0A2D32}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemsService.Lib", "src\ItemsService.Lib\ItemsService.Lib.csproj", "{07EC0079-FD89-43B7-A48B-0768DF8A8738}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,9 +24,14 @@ Global
 		{E664959F-D506-41B5-A847-1A19918EA52C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E664959F-D506-41B5-A847-1A19918EA52C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E664959F-D506-41B5-A847-1A19918EA52C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07EC0079-FD89-43B7-A48B-0768DF8A8738}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07EC0079-FD89-43B7-A48B-0768DF8A8738}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07EC0079-FD89-43B7-A48B-0768DF8A8738}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07EC0079-FD89-43B7-A48B-0768DF8A8738}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{319FC723-2642-4A73-9E70-7DEFF2B19A22} = {E9D23080-09CF-4B8F-8645-DAB5705421C4}
 		{E664959F-D506-41B5-A847-1A19918EA52C} = {E67F2C5A-0CEF-47F5-BE39-66561E0A2D32}
+		{07EC0079-FD89-43B7-A48B-0768DF8A8738} = {E9D23080-09CF-4B8F-8645-DAB5705421C4}
 	EndGlobalSection
 EndGlobal

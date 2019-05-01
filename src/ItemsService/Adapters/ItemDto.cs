@@ -14,16 +14,17 @@ namespace ItemsService.Adapters
         
         public decimal Price { get; set; }
 
-        public ItemDto(Domain.Item entity)
+        public ItemDto(Item entity)
         {
-            this.Name = entity.Name.Value;
-            this.Price = entity.Price.Value;
+            Name = entity.Name.Value;
+            Price = entity.Price.Value;
+            Id = entity.Id.Value;
         }
 
         // Use AutoMapper for this in big project.
-        public Domain.Item ToEntity()
+        public Item ToItem()
         {
-            return new Domain.Item(new Name(this.Name), new Money(this.Price));
+            return new Item(Id,Name, Price);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace ItemsService.Adapters
             return _items
                 .Find(item => true)
                 .ToList()
-                .Select(item => item.ToEntity())
+                .Select(item => item.ToItem())
                 .ToList();
         }
 
