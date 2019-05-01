@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using ItemsService.Controllers;
+using ItemsService.Domain;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
@@ -38,16 +39,13 @@ namespace ItemsService.Tests
         [Fact]
         public async Task AdOneToAll()
         {
-            var item = new ItemModel()
-            {
-                Text = "Test"
-            };
+            var item = new ItemModel(new Item( new Name("Test"), new Money(0)));
 
             var oldItems = await GetAll();
             await Add(item);
             var newItems = await GetAll();
             Assert.Equal(oldItems.Count + 1, newItems.Count);
-            Assert.Contains(newItems, model => model.Text == item.Text);
+            Assert.Contains(newItems, model => model.Name == item.Name);
         }
 
         private async Task<List<ItemModel>> GetAll()

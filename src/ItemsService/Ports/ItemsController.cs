@@ -7,9 +7,9 @@ namespace ItemsService.Controllers
 {
     public class ItemsController : Controller
     {
-        private readonly IItemsService _service;
+        private readonly IItemRepository _service;
 
-        public ItemsController(IItemsService service)
+        public ItemsController(IItemRepository service)
         {
             _service = service;
         }
@@ -23,7 +23,7 @@ namespace ItemsService.Controllers
         [HttpPost]
         public void Add([FromBody] ItemModel model)
         {
-            _service.Add(model.ToEntity());
+            _service.Save(model.ToEntity());
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using ItemsService.Domain;
 
@@ -5,25 +6,28 @@ namespace ItemsService.Controllers
 {
     public class ItemModel
     {
-        [Display(Name = "Текст")]
-        public string Text { get; set; }
+        public string Id { get; set; }
+        
+        [Display(Name = "Название")]
+        public string Name { get; set; }
+        
+        [Display(Name = "Цена")]
+        public decimal Price { get; set; }
 
-        public ItemModel(ItemEntity entity)
+        public ItemModel(Item entity)
         {
-            this.Text = entity.Text;
+            this.Name = entity.Name.Value;
         }
 
+        [Obsolete("For json serialization only")]
         public ItemModel()
         {
             
         }
 
-        public ItemEntity ToEntity()
+        public Item ToEntity()
         {
-            return new ItemEntity()
-            {
-                Text = this.Text
-            };
+            return new Item(new Id(this.Id),  new Name(this.Name), new Money(0));
         }
     }
 }

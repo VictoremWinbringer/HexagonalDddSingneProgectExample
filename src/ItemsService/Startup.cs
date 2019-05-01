@@ -34,7 +34,6 @@ namespace ItemsService
             });
 
             services.AddTransient<IItemRepository, ItemMongoRepository>();
-            services.AddTransient<IItemsService, Domain.ItemsService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
