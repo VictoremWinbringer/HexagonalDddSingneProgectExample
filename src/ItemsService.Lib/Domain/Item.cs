@@ -1,4 +1,6 @@
-namespace ItemsService.Domain
+using ItemsService.Lib.Domain.ValueObjects;
+
+namespace ItemsService.Lib.Domain
 {
     public class Item
     {

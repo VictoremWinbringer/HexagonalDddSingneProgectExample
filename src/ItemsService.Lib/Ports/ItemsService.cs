@@ -1,7 +1,9 @@
 using System.Collections.Generic;
-using ItemsService.Domain;
+using ItemsService.Lib.Adapters;
+using ItemsService.Lib.Domain;
+using ItemsService.Lib.Domain.ValueObjects;
 
-namespace ItemsService.Services
+namespace ItemsService.Lib.Ports
 {
     public class ItemsService : IItemsService
     {

@@ -1,6 +1,7 @@
 using System;
+using ItemsService.Lib.Domain.ValueObjects;
 
-namespace ItemsService.Domain
+namespace ItemsService.Lib.Domain.Exceptions
 {
     public class ShopDontHaveThisUserException : Exception
     {

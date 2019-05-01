@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using ItemsService.Lib.Domain.Exceptions;
+using ItemsService.Lib.Domain.ValueObjects;
 
-namespace ItemsService.Domain
+namespace ItemsService.Lib.Domain
 {
     public class Shop
     {
@@ -26,7 +28,7 @@ namespace ItemsService.Domain
                 throw  new ShopDontHaveThisUserException(userId);
             
             user.Buy(item);
-            Money = new Money(this.Money.Value + item.Price.Value);
+            Money = new Money(Money.Value + item.Price.Value);
             _items.RemoveAll(i => i.Id.Value == item.Id.Value);
            
         }

@@ -1,8 +1,8 @@
-using ItemsService.Domain;
+using ItemsService.Lib.Domain;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace ItemsService.Adapters
+namespace ItemsService.Lib.Adapters
 {
     public class ItemDto
     {
@@ -10,13 +10,13 @@ namespace ItemsService.Adapters
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
 
-        public string Name { get; set; }
+        public string Text { get; set; }
         
         public decimal Price { get; set; }
 
         public ItemDto(Item entity)
         {
-            Name = entity.Name.Value;
+            Text = entity.Name.Value;
             Price = entity.Price.Value;
             Id = entity.Id.Value;
         }
@@ -24,7 +24,7 @@ namespace ItemsService.Adapters
         // Use AutoMapper for this in big project.
         public Item ToItem()
         {
-            return new Item(Id,Name, Price);
+            return new Item(Id,Text, Price);
         }
     }
 }

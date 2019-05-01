@@ -1,4 +1,6 @@
-namespace ItemsService.Domain
+using ItemsService.Lib.Domain.Exceptions;
+
+namespace ItemsService.Lib.Domain.ValueObjects
 {
     public struct Id
     {

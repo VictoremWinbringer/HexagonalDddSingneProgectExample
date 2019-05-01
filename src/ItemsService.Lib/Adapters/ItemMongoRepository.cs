@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using ItemsService.Domain;
+using ItemsService.Lib.Domain;
 using MongoDB.Driver;
 
-namespace ItemsService.Adapters
+namespace ItemsService.Lib.Adapters
 {
     public class ItemMongoRepository : IItemRepository
     {
@@ -14,7 +14,7 @@ namespace ItemsService.Adapters
             _items = database.GetCollection<ItemDto>("Items");
         }
 
-        public List<Domain.Item> GetAll()
+        public List<Item> GetAll()
         {
             return _items
                 .Find(item => true)
@@ -23,7 +23,7 @@ namespace ItemsService.Adapters
                 .ToList();
         }
 
-        public void Save(Domain.Item entity)
+        public void Save(Item entity)
         {
             var item = new ItemDto(entity);
             _items.InsertOne(item);

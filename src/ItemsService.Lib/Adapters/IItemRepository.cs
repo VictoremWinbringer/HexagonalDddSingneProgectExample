@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using ItemsService.Lib.Domain;
 
-namespace ItemsService.Domain
+namespace ItemsService.Lib.Adapters
 {
     public interface IItemRepository
     {

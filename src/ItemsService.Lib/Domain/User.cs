@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Rewrite;
+using ItemsService.Lib.Domain.Exceptions;
+using ItemsService.Lib.Domain.ValueObjects;
 
-namespace ItemsService.Domain
+namespace ItemsService.Lib.Domain
 {
     // Для простоты примера у нас тут пользователь только с наличкой
     // По нормальному нужно еще сушьность кошелек пользователя вводить и т.д.
@@ -22,7 +23,7 @@ namespace ItemsService.Domain
         {
             if (_items.Any(i => i.Id.Value == item.Id.Value))
                 throw new UserAlreadyHaveThisItemException(item);
-            Money = new Money(this.Money.Value - item.Price.Value);
+            Money = new Money(Money.Value - item.Price.Value);
             _items.Add(item);
         }
 

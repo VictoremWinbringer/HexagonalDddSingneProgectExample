@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ItemsService.Domain;
+using ItemsService.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ItemsService.Controllers
 {
     public class ItemsController : Controller
     {
-        private readonly Services.ItemsService _service;
+        private readonly Lib.Ports.IItemsService _service;
 
-        public ItemsController(Services.ItemsService service)
+        public ItemsController(Lib.Ports.IItemsService service)
         {
             _service = service;
         }

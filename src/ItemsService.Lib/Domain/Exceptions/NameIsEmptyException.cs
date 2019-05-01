@@ -1,6 +1,6 @@
 using System;
 
-namespace ItemsService.Domain
+namespace ItemsService.Lib.Domain.Exceptions
 {
     public class NameIsEmptyException:Exception
     {

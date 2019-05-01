@@ -51,4 +51,9 @@
       <_ContentIncludedByDefault Remove="wwwroot\favicon.ico" />
     </ItemGroup>
 
+
+    <ItemGroup>
+      <ProjectReference Include="..\ItemsService.Lib\ItemsService.Lib.csproj" />
+    </ItemGroup>
+
 </Project>

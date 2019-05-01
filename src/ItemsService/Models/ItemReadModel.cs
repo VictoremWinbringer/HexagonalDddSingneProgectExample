@@ -1,8 +1,8 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using ItemsService.Domain;
+using ItemsService.Lib.Domain;
 
-namespace ItemsService.Controllers
+namespace ItemsService.Models
 {
     public class ItemReadModel
     {
@@ -16,7 +16,15 @@ namespace ItemsService.Controllers
 
         public ItemReadModel(Item entity)
         {
-            this.Name = entity.Name.Value;
+            Name = entity.Name.Value;
+            Price = entity.Price.Value;
+            Id = entity.Id.Value;
+        }
+        
+        [Obsolete("For serialization")]
+        public ItemReadModel()
+        {
+            
         }
     }
 }

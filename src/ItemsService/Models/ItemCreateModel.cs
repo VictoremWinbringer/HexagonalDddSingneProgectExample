@@ -1,6 +1,6 @@
-using ItemsService.Domain;
+using ItemsService.Lib.Domain;
 
-namespace ItemsService.Controllers
+namespace ItemsService.Models
 {
     public class ItemCreateModel
     {

@@ -1,11 +1,12 @@
 using System.Collections.Generic;
-using ItemsService.Domain;
+using ItemsService.Lib.Domain;
 
-namespace ItemsService.Services
+namespace ItemsService.Lib.Ports
 {
     public interface IItemsService
     {
         List<Item> GetAll();
         void Add(Item entity);
+        void Buy(string userId, string itemId, string shopId);
     }
 }

@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
+using ItemsService.Lib.Domain.Exceptions;
 
-namespace ItemsService.Domain
+namespace ItemsService.Lib.Domain.ValueObjects
 {
     public struct Name
     {
