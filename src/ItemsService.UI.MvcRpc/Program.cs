@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace ItemsService
+namespace ItemsService.UI.MvcRpc
 {
     public class Program
     {

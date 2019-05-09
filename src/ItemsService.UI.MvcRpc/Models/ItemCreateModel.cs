@@ -1,6 +1,8 @@
+
+
 using ItemsService.Lib.Domain;
 
-namespace ItemsService.Models
+namespace ItemsService.UI.MvcRpc.Models
 {
     public class ItemCreateModel
     {

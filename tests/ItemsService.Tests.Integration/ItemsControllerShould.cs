@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-using ItemsService.Models;
+using ItemsService.UI.MvcRpc;
+using ItemsService.UI.MvcRpc.Models;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 using Newtonsoft.Json;
 using Xunit;
 
-namespace ItemsService.Tests
+namespace ItemsService.Tests.Integration
 {
     public class ItemsControllerShould : IDisposable
     {

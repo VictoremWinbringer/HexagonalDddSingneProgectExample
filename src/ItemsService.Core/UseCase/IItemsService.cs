@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using ItemsService.Lib.Domain;
 
-namespace ItemsService.Lib.Ports
+namespace ItemsService.Lib.UseCase
 {
     public interface IItemsService
     {

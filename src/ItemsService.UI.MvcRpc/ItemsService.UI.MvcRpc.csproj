@@ -53,7 +53,8 @@
 
 
     <ItemGroup>
-      <ProjectReference Include="..\ItemsService.Lib\ItemsService.Lib.csproj" />
+      <ProjectReference Include="..\ItemsService.Core\ItemsService.Core.csproj" />
+      <ProjectReference Include="..\ItemsService.Infrastructure\ItemsService.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,8 +1,10 @@
+
+
 using ItemsService.Lib.Domain;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-namespace ItemsService.Lib.Adapters
+namespace ItemsService.Infrastructure
 {
     public class ItemDto
     {

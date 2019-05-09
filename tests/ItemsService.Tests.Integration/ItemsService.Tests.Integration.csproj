@@ -18,8 +18,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\ItemsService.Lib\ItemsService.Lib.csproj" />
-      <ProjectReference Include="..\..\src\ItemsService\ItemsService.csproj" />
+      <ProjectReference Include="..\..\src\ItemsService.Core\ItemsService.Core.csproj" />
+      <ProjectReference Include="..\..\src\ItemsService.UI.MvcRpc\ItemsService.UI.MvcRpc.csproj" />
     </ItemGroup>
 
     <ItemGroup>

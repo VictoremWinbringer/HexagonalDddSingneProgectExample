@@ -1,4 +1,5 @@
-﻿using ItemsService.Lib.Adapters;
+﻿using ItemsService.Infrastructure;
+using ItemsService.Lib.UseCase;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -6,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Driver;
 
-namespace ItemsService
+namespace ItemsService.UI.MvcRpc
 {
     public class Startup
     {
@@ -27,7 +28,7 @@ namespace ItemsService
             });
 
             services.AddTransient<IItemRepository, ItemMongoRepository>();
-            services.AddTransient<Lib.Ports.IItemsService, Lib.Ports.ItemsService>();
+            services.AddTransient<IItemsService, Lib.UseCase.ItemsService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
